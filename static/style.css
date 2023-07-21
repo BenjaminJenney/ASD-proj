@@ -1,0 +1,50 @@
+
+body {
+    margin: 0;
+    background: #FEFFC3;
+}
+
+header {
+    background-color: #A5D9DD;
+    width: 100%;
+    height: 100vp;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Work Sans;
+    font-size: 17.333px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+ellipse {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 200px;
+    width: 295px;
+    height: 229px;
+    border-radius: 295px;
+    background: #FFF;
+}
+footer {
+    background: #EDC8D6;
+    width: 1440px;
+    height: 289px;
+    flex-shrink: 0;
+}
+
+[src='../static/imgs/happy.png'] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 427px;
+    height: 392px;
+}
+
+#emoticons-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}

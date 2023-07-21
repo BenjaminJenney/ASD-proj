@@ -10,9 +10,11 @@ db = SQLAlchemy(app)
 def home():
  return '<h1>Hello World!</h1>'
 
+
 @app.route('/happy_expr_matching_game')
 def happy_expr_matching_game():
     return render_template('game1.html')
+
 # SQLAlchemy will assume that the name of your table is the lowercase version of your
 # model class name
 class User(db.Model):

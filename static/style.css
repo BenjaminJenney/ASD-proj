@@ -17,6 +17,7 @@ header {
     line-height: normal;
     text-align: center;
 }
+
 ellipse {
     display: inline-flex;
     align-items: flex-start;

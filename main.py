@@ -10,7 +10,6 @@ db = SQLAlchemy(app)
 def home():
  return '<h1>Hello World!</h1>'
 
-
 @app.route('/happy_expr_matching_game')
 def happy_expr_matching_game():
     return render_template('game1.html')

@@ -7,10 +7,11 @@ app.config.from_object(DevConfig)
 db = SQLAlchemy(app)
 
 @app.route('/')
-def home():
- return '<h1>Hello World!</h1>'
+def home_page():
+ return render_template('home.html')
 
-@app.route('/happy_expr_matching_game')
+
+@app.route('/game1.html')
 def happy_expr_matching_game():
     return render_template('game1.html')
 

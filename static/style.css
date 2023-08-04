@@ -41,10 +41,21 @@ button {
     width: 295px;
     height: 229px;
     border-radius: 295px;
-    background: #FFF;
-    
-    
+    background: #FFF;    
 }
+
+button1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 295px;
+    height: 229px;
+    border-radius: 295px;
+    background: #FFF;   
+}
+
 footer {
     background: #EDC8D6;
     width: 100%;

@@ -14,8 +14,25 @@ function myHappyFunction() {
 document.addEventListener("DOMContentLoaded", function() {
 
     const emotionGameButton = document.getElementById("emotionGameButton");
+    const emotionQuizButton = document.getElementById("emotionQuizButton");
+    const conversationalAIButton = document.getElementById("conversationalAIButton");
+    const goToTheGameButton = document.getElementById("goToTheGameButton");
+    
   
     emotionGameButton.addEventListener("click", function() {
-      window.location.href = "game1.html";
+      window.location.href = "learnEmotions.html";
     });
-  });
+
+    emotionQuizButton.addEventListener("click", function() {
+        window.location.href = "emotionsQuiz.html";
+    });
+
+    conversationalAIButton.addEventListener("click", function() {
+        window.location.href = "conversationalAI.html";
+    });
+
+    goToTheGameButton.addEventListener("click", function() {
+        window.location.href = "game.html";
+    });
+
+  });``

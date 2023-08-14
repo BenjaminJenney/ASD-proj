@@ -19,10 +19,6 @@ header {
 }
 
 #Story-text {
-    background-color: #e6eff0;
-    width: 100%;
-    height: 100vp;
-    flex-shrink: 0;
     color: #000;
     font-family: 'Times New Roman', Times, serif;
     font-size: 17.333px;
@@ -30,6 +26,7 @@ header {
     font-weight: 500;
     line-height: normal;
     text-align: center;
+    padding: 0 10px;
 }
 
 button {
@@ -44,16 +41,11 @@ button {
     background: #FFF;    
 }
 
-button1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 295px;
-    height: 229px;
-    border-radius: 295px;
-    background: #FFF;   
+button img {
+    max-width: 60%;
+    max-height: 60%;
+    width: auto;
+    height: auto;
 }
 
 footer {
@@ -61,15 +53,6 @@ footer {
     width: 100%;
     height: 289px;
     flex-shrink: 0;
-}
-
-[src='../static/imgs/happy.png'] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    width: 427px;
-    height: 392px;
 }
 
 #emoticons-flex-container {
@@ -82,9 +65,37 @@ footer {
 
 .emotion-label {
     font-family: Work Sans;
-    font-size: 40px;
+    font-size: 150%;
     font-style: normal;
     font-weight: 400;
     text-align: center;
     margin: 0;
+    max-width: 90%;
+}
+
+[src='../static/imgs/birthday.png'] {
+    margin-top: 3%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%; 
+    height: auto;
+}
+
+[src='../static/imgs/aquarium.png'] {
+    margin-top: 3%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38%; 
+    height: auto;
+}
+
+[src='../static/imgs/cinema.png'] {
+    margin-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 27%; 
+    height: auto;
 }

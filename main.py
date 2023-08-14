@@ -1,19 +1,39 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from config import DevConfig
+import random
 
 app = Flask(__name__)
 app.config.from_object(DevConfig)
 db = SQLAlchemy(app)
 
+stories_excited = [
+    {"text": "Today is my birthday. I am going to have a big birthday party with my friends. I am looking forward to it and I feel very ….. Select the correct feeling", "image": "../static/imgs/birthday.png"},
+    {"text": "Today I am going to the aquarium with my sister. I look forward to see so many water animals. I feel very….  Select the correct feeling", "image": "../static/imgs/aquarium.png"},
+    {"text": "Today I will go to the cinema to watch my favorite cartoon. I feel very……  Select the correct feeling", "image": "../static/imgs/cinema.png"}
+]
+
 @app.route('/')
 def home_page():
  return render_template('home.html')
 
+@app.route('/conversationalAI.html')
+def conversationaAI():
+ return render_template('conversationalAI.html')
 
-@app.route('/game1.html')
+@app.route('/emotionsQuiz.html')
+def emotionsQuiz():
+ random_story = random.choice(stories_excited)
+ return render_template('emotionsQuiz.html', story=random_story['text'], image=random_story['image'])
+
+@app.route('/learnEmotions.html')
+def different_emotions_learning():
+ return render_template('learnEmotions.html')
+
+@app.route('/game.html')
 def happy_expr_matching_game():
-    return render_template('game1.html')
+    random_story = random.choice(stories_excited)
+    return render_template('game.html', story=random_story['text'], image=random_story['image'])
 
 # SQLAlchemy will assume that the name of your table is the lowercase version of your
 # model class name
@@ -64,3 +84,4 @@ class Post(db.Model):
   db.Time '''
 if __name__ == '__main__':
     app.run()
+

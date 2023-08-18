@@ -15,7 +15,7 @@ stories_excited = [
 
 @app.route('/')
 def home_page():
- return render_template('home.html')
+    return render_template('home.html')
 
 @app.route('/conversationalAI.html')
 def conversationaAI():
@@ -23,12 +23,12 @@ def conversationaAI():
 
 @app.route('/emotionsQuiz.html')
 def emotionsQuiz():
- random_story = random.choice(stories_excited)
- return render_template('emotionsQuiz.html', story=random_story['text'], image=random_story['image'])
+    random_story = random.choice(stories_excited)
+    return render_template('emotionsQuiz.html', story=random_story['text'], image=random_story['image'])
 
 @app.route('/learnEmotions.html')
 def different_emotions_learning():
- return render_template('learnEmotions.html')
+    return render_template('learnEmotions.html')
 
 @app.route('/game.html')
 def happy_expr_matching_game():

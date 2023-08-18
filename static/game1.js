@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const conversationalAIButton = document.getElementById("conversationalAIButton");
     const goToTheGameButton = document.getElementById("goToTheGameButton");
     
-  
     emotionGameButton.addEventListener("click", function() {
       window.location.href = "learnEmotions.html";
     });
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     goToTheGameButton.addEventListener("click", function() {
+        console.log("Button clicked. Navigating to game.html");
         window.location.href = "game.html";
     });
-
-  });``
+});

@@ -61,14 +61,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function checkAnswer(userAnswer) {
-    const correctAnswer = 'excited'; 
-    if (userAnswer === correctAnswer) {
+    const correctAnswer = "{{correctAnswer}}"; 
+    console.log("User Answer:", userAnswer);
+    console.log("Correct Answer:", correctAnswer);
+
+    if (userAnswer == correctAnswer) {
         window.location.href = 'goodJob.html'; 
     } else {
         window.location.href = 'tryAgain.html'; 
     }
 }
 
+
 function goBackToGame() {
-    window.location.href = "game.html";
+    window.location.href = "x_joyful.html";
+}
+function joyful() {
+    window.location.href = "x_joyful.html";
+}
+function mad() {
+    window.location.href = "x_mad.html";
 }

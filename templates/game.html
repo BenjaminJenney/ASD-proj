@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,9 +14,9 @@
             <p id="Story-text">{{ story }}</p>
             <footer>
                 <div id="emoticons-flex-container">
-                    <button type="button" onclick="checkAnswer('excited')">
+                    <button type="button" onclick="checkAnswer({correctAnswer})">
                         <img src="../static/imgs/happy-emoticon.png" alt="Happy Emoji" />
-                        <p class="emotion-label">Excited</p>
+                        <p class="emotion-label">{{correctAnswer}}</p>
                     </button>
                     <button type="button" onclick="checkAnswer('sad')"> 
                         <img src="../static/imgs/sad-emoticon.png"  alt="Sad Emoji" />

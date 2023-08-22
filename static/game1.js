@@ -10,16 +10,21 @@ function myHappyFunction() {
 //function randomClickCounter() {
     // Illigitimate click count variable (from DB) will be updated here for each click 
 //}
-*/
+*/    
 document.addEventListener("DOMContentLoaded", function() {
-    
-    const emotionLearningButton = document.getElementById("emotionLearningButton");
-    const emotionQuizButton = document.getElementById("emotionQuizButton");
-    const conversationalAIButton = document.getElementById("conversationalAIButton");
-    const goToTheGameButton = document.getElementById("goToTheGameButton");
-    
+
+    const emotionLearningButton = document.getElementById('emotionLearningButton');
+    const emotionQuizButton = document.getElementById('emotionQuizButton');
+    const conversationalAIButton = document.getElementById('conversationalAIButton');
+    const joyfulButton = document.getElementById('joyfulButton');
+    const powerfulButton = document.getElementById('powerfulButton');
+    const peacefulButton = document.getElementById('peacefulButton');
+    const scaredButton = document.getElementById('scaredButton');
+    const sadButton = document.getElementById('sadButton');
+    const madButton = document.getElementById('madButton');
+
     emotionLearningButton.addEventListener("click", function() {
-      window.location.href = "learnEmotions.html";
+    window.location.href = "learnEmotions.html";
     });
 
     emotionQuizButton.addEventListener("click", function() {
@@ -30,8 +35,40 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "conversationalAI.html";
     });
 
-    goToTheGameButton.addEventListener("click", function() {
-        window.location.href = "game.html";
-      });
-      
+    joyfulButton.addEventListener("click", function() {
+        window.location.href = "game.html?emotion=joyful";
+    });
+
+    powerfulButton.addEventListener("click", function() {
+    window.location.href = "game.html";
+    });
+
+    peacefulButton.addEventListener("click", function() {
+    window.location.href = "game.html";
+    });
+
+    scaredButton.addEventListener("click", function() {
+    window.location.href = "game.html";
+    });
+
+    sadButton.addEventListener("click", function() {
+    window.location.href = "game.html";
+    });
+
+    madButton.addEventListener("click", function() {
+        window.location.href = "game.html?emotion=mad";
+    });
 });
+
+function checkAnswer(userAnswer) {
+    const correctAnswer = 'excited'; 
+    if (userAnswer === correctAnswer) {
+        window.location.href = 'goodJob.html'; 
+    } else {
+        window.location.href = 'tryAgain.html'; 
+    }
+}
+
+function goBackToGame() {
+    window.location.href = "game.html";
+}
